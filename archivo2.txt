@@ -1,1 +1,2 @@
 texto de archivo 2
+Este es un cambio para probar la otra forma de hacer commit
