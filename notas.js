@@ -73,4 +73,13 @@ al usar git status de nuevo nos sale en verde y nos dice que se ha renombrado el
 Luego usamos git commit -m "Renombrando archivo"
 *Renombramos y ponemos en stage un archivo: git mv notas1.js notas.js
 Hacemos commit: git commit -m "Devolviendo el nombre del archivo"
+
+*Como ignorar archivos para que estos no sean incluidos nunca en nuestros repos de git
+esto se hace xq a veces tendremos archi de config que sean especificos solo para nuestra PC, como las vars de entorno, supongamos que estamos trabajando en una base, esta base la tendremos instalada en local, y esto para que estemos trabajando en un ambiente de desarrollo,
+en ese caso, los users, contraseñas, y cualquier otro tipo de acceso va a ser completamente diferente al de produccion, por eso queremos tener ese doc guardado en la pc, pero que este no se suba por algun error al repo, ya que no queremos que otras personas conozcan nuestra contra
+y ademas, queremos que esto sea configurable de manera que cuando la app se despligue a produccion, solo una persona tenga acceso a esas vars de entorno las cuales serviran para configurar la app y que este se conecte finalmente con la base de produccion
+*creamos un arch .env que se usa generalmente para vars de entorno, vamos a suponer que la app se va a conectar a una base mysql usando las vars de user y contra. Con git status ya nos sale que podemos add los cambios de .env, pero como no queremos que se suba creamos un archi que se llame
+".gitignore" y alli especificamos las rutas de las carpetas o los arch que quiero ignorar y que estas no vayan a nuestro repo, ahora al usar git stat no sale .env, si no solo .gitignore, lo que hacemos es add este arch y lo comprometemos de una
+git add .gitignore
+git commit -m "Agregando archivo gitignore"
 */
