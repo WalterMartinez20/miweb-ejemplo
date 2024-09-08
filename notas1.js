@@ -63,6 +63,12 @@ Lo que pasamos a stage no son los archi mismos, si no que son las modificaciones
 con git status nos saldra que ha sido eliminado el arch, para add este cambio a stage usamos "git add archivo2.txt"
 *git rm archivo: este paso de eliminar el archi y luego add a stage es algo repetitivo, pero git tiene un comando que nos ahorra un paso que es "git rm archivo2.txt", con esto ya nos sale el archi en verde listo para ser comiteado, si queremos sacar algun cambio que hayamos
 pasado a stage usamos "git restore --staged archivo1.txt", con esto el archi sale en rojo xq ya no se encuentra en stage
-git rm notas.js //eliminamos el archi y se pasa a stage
-git restore --staged notas.js //sacamos de stage el cambio
+git rm notas2.txt //eliminamos el archi y se pasa a stage
+git restore --staged notas2.txt //sacamos de stage el cambio de eliminar notas2.txt
+git restore notas2.txt //descartamos los cambios que se hicieron, osea recuperamos el archi incluso desde una etapa antes de hacer commit
+*mv: mueve y renombra archivos. mv origenDelArchivo destinoDelArchivo. mv notas.js notas1.js
+al usar git status nos dice que se ha eliminado notas.js y se ha creado un archivo notas1.js, sale asi por haber usado el mv
+add los dos archivos: git add notas.js notas1.js
+al usar git status de nuevo nos sale en verde y nos dice que se ha renombrado el archi: renamed: notas.js -> notas1.js
+Luego usamos git commit -m "Renombrando archivo"
 */
