@@ -58,5 +58,8 @@ Luego editamos este archi y le damos git status y nos va a salir los dos archi e
 Lo que pasamos a stage no son los archi mismos, si no que son las modificaciones que hemos hecho en estos archi
 *Para comprometer los archi (hacer commit) hay dos formas: la 1° y la forma recomendada que es la que vamos a seguir es:
 *git commit -m "Commit inicial"
-la otra forma de hacer commit es con "git commit" y presionamos enter y nos abrira un archi en VSC, alli solo tenemos que poner el msj en la primera linea
+*la otra forma de hacer commit es con "git commit" y presionamos enter y nos abrira un archi en VSC, alli solo tenemos que poner el msj en la primera linea
+*rm archivo: eliminamos un archivo
+con git status nos saldra que ha sido eliminado el arch, para add este cambio a stage usamos "git add archivo2.txt"
+
 */
