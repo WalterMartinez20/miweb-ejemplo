@@ -71,4 +71,6 @@ al usar git status nos dice que se ha eliminado notas.js y se ha creado un archi
 add los dos archivos: git add notas.js notas1.js
 al usar git status de nuevo nos sale en verde y nos dice que se ha renombrado el archi: renamed: notas.js -> notas1.js
 Luego usamos git commit -m "Renombrando archivo"
+*Renombramos y ponemos en stage un archivo: git mv notas1.js notas.js
+Hacemos commit: git commit -m "Devolviendo el nombre del archivo"
 */
