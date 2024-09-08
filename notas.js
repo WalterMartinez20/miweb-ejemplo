@@ -88,4 +88,8 @@ git commit -m "Agregando archivo gitignore"
 al usar el git status -s nos da lo de arriba, el gitignore tiene una M xq ha sido modificado, si usamos git add .gitignore, la M saldra en verde y no en rojo, osea se add a stage
 el archivo 3 sale con dos ?? xq este doc todavia no ha sido add pa que git le pueda hacer seguimiento y ahora en ves de ?? nos sale una A verde, esto quiere decir que estamos add
 este doc y hacemos un commit: git commit -m "Mostrando status corto"
+*git diff: sale todo el texto de lo que representaria los cambios que estamos dispuestos a add, tmb muestra las lineas que se eliminaron y las que se add
+en este caso nos sale que eliminamos la primera linea del archivo3.txt xq antes solo teniamos esa linea y no habiamos presionado enter, no habia un salto de linea, por eso cuando add el salto de linea, ese salto se add sobre la misma linea que seria la 1° del archi, osea elimina la linea y luego
+la vuelve a add pero con un caracter de salto de linea, por eso nos dice que esta add las otras lineas que vienen despues. @@ -1 +1,3 @@, esto nos dice que empieza desde la linea 1 con la ver anterior del archi, despues tendriamos la siguiente ver que seria los cambios que nosotros realizamos que empieza
+desde la linea 1 y que ha extraido 3 lineas
 */
