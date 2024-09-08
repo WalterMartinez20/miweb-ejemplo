@@ -61,5 +61,8 @@ Lo que pasamos a stage no son los archi mismos, si no que son las modificaciones
 *la otra forma de hacer commit es con "git commit" y presionamos enter y nos abrira un archi en VSC, alli solo tenemos que poner el msj en la primera linea
 *rm archivo: eliminamos un archivo
 con git status nos saldra que ha sido eliminado el arch, para add este cambio a stage usamos "git add archivo2.txt"
-
+*git rm archivo: este paso de eliminar el archi y luego add a stage es algo repetitivo, pero git tiene un comando que nos ahorra un paso que es "git rm archivo2.txt", con esto ya nos sale el archi en verde listo para ser comiteado, si queremos sacar algun cambio que hayamos
+pasado a stage usamos "git restore --staged archivo1.txt", con esto el archi sale en rojo xq ya no se encuentra en stage
+git rm notas.js //eliminamos el archi y se pasa a stage
+git restore --staged notas.js //sacamos de stage el cambio
 */
