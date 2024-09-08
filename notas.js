@@ -82,4 +82,10 @@ y ademas, queremos que esto sea configurable de manera que cuando la app se desp
 ".gitignore" y alli especificamos las rutas de las carpetas o los arch que quiero ignorar y que estas no vayan a nuestro repo, ahora al usar git stat no sale .env, si no solo .gitignore, lo que hacemos es add este arch y lo comprometemos de una
 git add .gitignore
 git commit -m "Agregando archivo gitignore"
+*para mostrar de diferente forma el status: git status -s
+ M .gitignore
+?? archivo3.txt
+al usar el git status -s nos da lo de arriba, el gitignore tiene una M xq ha sido modificado, si usamos git add .gitignore, la M saldra en verde y no en rojo, osea se add a stage
+el archivo 3 sale con dos ?? xq este doc todavia no ha sido add pa que git le pueda hacer seguimiento y ahora en ves de ?? nos sale una A verde, esto quiere decir que estamos add
+este doc y hacemos un commit: git commit -m "Mostrando status corto"
 */
