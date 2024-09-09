@@ -110,6 +110,6 @@ al hacer el git log vemos que nos encontramos en la head de ramab, osea nos enco
 76f7c7e (master) Mostrando status corto
 ...
 *mostramos el contenido de nuestro archivo: cat archivo3.txt
-*cambiamos a la rama main: git checkout main
+*cambiamos a la rama main: git checkout master
 
 */
