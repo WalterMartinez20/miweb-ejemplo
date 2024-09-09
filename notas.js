@@ -88,4 +88,30 @@ git commit -m "Agregando archivo gitignore"
 al usar el git status -s nos da lo de arriba, el gitignore tiene una M xq ha sido modificado, si usamos git add .gitignore, la M saldra en verde y no en rojo, osea se add a stage
 el archivo 3 sale con dos ?? xq este doc todavia no ha sido add pa que git le pueda hacer seguimiento y ahora en ves de ?? nos sale una A verde, esto quiere decir que estamos add
 este doc y hacemos un commit: git commit -m "Mostrando status corto"
+
+*git diff: sale todo el texto de lo que representaria los cambios que estamos dispuestos a add, tmb muestra las lineas que se eliminaron y las que se add
+en este caso nos sale que eliminamos la primera linea del archivo3.txt xq antes solo teniamos esa linea y no habiamos presionado enter, no habia un salto de linea, por eso cuando add el salto de linea, ese salto se add sobre la misma linea que seria la 1° del archi, osea elimina la linea y luego
+la vuelve a add pero con un caracter de salto de linea, por eso nos dice que esta add las otras lineas que vienen despues. @@ -1 +1,3 @@, esto nos dice que empieza desde la linea 1 con la ver anterior del archi, despues tendriamos la siguiente ver que seria los cambios que nosotros realizamos que empieza
+desde la linea 1 y que ha extraido 3 lineas
+*git diff --staged: muestra los cambios que estan en staged. git diff solo muestra los cambios que hemos escrito pero todavia no hemos pasado a stage, pero con --staged si nos mostrara todos los cambios que se encuentran en staged. Es muy util xq si queremos ver cambios vamos a querer ver los cambios que
+nosotros queremos comprometer y no vamos a querer ver absolutame todo.
+*ver historial del repositorio: git log --oneline. Nos muestra el historial con un has que sirve como id de ese commit, ese vendria siendo un numero unico con el cual se va a indentificar ese commit dentro del regis en git, por eso hay que poner msj claros en los commit xq cuando otro desarrollador los lea
+tendra que entender de que se trata y asi el hasta incluso podria encontrar un potencial error
+
+*Ramas: hasta ahora hemos trabajado de una forma lineal, osea cuando hacemos un cambio, este se coloca encima en nuestro historial, siempre vamos a colocar cambios con respecto a algo que se encuentra en el pasado, por eso podemos seguir constantemen add cambios, pero que pasaria si hay mas de un desarro trabajando
+en un mismo proyecto, lo que queremos hacer es tomar una pequeña bifurcacion o salirnos de esta parte del historial de manera que nosotros podamos trabajar en nuestro code y cuando hayamos terminado nuestra funciona o corregir algun bug, recien alli devolvernos a la rama principal, esto se conoce como branch en git
+o la traduccion que seria rama, donde vamos a crear una rama donde add commits, pero que es independiente de la rama principal y cuando terminemos la funcion podemos solicitar realizar un merge a la rama de main, que seria la rama principal y luego podemos continuar con el desarrollo de la app en la rama main
+git restore --staged archivo3.txt //restauramos el archivo
+git restore archivo3.txt //descartamos estos cambios
+*git branch: para ver en que rama estamos, en este caso estamos en la rama main que es la principal que ya viene por defec en la mayoria de repos
+*git checkout -b ramab: creamos una nueva rama y nos cambiamos a esa rama nueva. Algunas empresas usan features/nombre-de-la-funcionalidad, pero otras empresas colocan sencillame el numero de ticket que quieren arreglar, ej: SS-4515
+add los cambios a stage y hacemos commit: git add archivo3.txt, git commit -m "actualizando archivo 2"
+al hacer el git log vemos que nos encontramos en la head de ramab, osea nos encontramos al final, en la ultima parte de ramab, el ultimo code que se ha escrito pero que tmb se encuentra la rama main en la segunda linea, y la head de main dice que es del commit "mostrando status corto"
+68d0a5d (HEAD -> ramab) actualizando archivo 2
+76f7c7e (master) Mostrando status corto
+...
+*mostramos el contenido de nuestro archivo: cat archivo3.txt
+*cambiamos a la rama main: git checkout master
+*desde la rama main traemos los cambios de la ramab: git merge ramab
+!en este caso no pude traer los cambios de ramab, me salia que tenia conflictos, por eso no hice esa parte del merge
 */
