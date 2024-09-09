@@ -88,7 +88,4 @@ git commit -m "Agregando archivo gitignore"
 al usar el git status -s nos da lo de arriba, el gitignore tiene una M xq ha sido modificado, si usamos git add .gitignore, la M saldra en verde y no en rojo, osea se add a stage
 el archivo 3 sale con dos ?? xq este doc todavia no ha sido add pa que git le pueda hacer seguimiento y ahora en ves de ?? nos sale una A verde, esto quiere decir que estamos add
 este doc y hacemos un commit: git commit -m "Mostrando status corto"
-al usar el cat (cat archivo3.txt) en la otra rama sale otro texto y en la rama principal otro, de esta forma podemos tener varias versiones de code que estan siendo trabajadas, como en ramab que add mas lineas, pero en la main vemos reflejado que aun no estan los cambios,
-lo que haremos es traer los cambios de ramab a la rama main, tenemos que escribir desde la rama main "git merge ramab" y con esto nos trae lo que hemos hecho en la otra rama, de esta manera podemos realizar varios trabajos y no estar todos trabajando en main, si no que cada persona
-se crea su rama, implementa la funcion y luego la mezcla o hace un merge con main
 */
